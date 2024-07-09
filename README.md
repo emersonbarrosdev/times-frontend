@@ -1,6 +1,18 @@
 # TimesFrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.14.
+TimesFrontend is an Angular application designed to manage football teams. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.14.
+
+## Table of Contents
+
+1. [Development Server](#development-server)
+2. [Code Scaffolding](#code-scaffolding)
+3. [Build](#build)
+4. [Running Unit Tests](#running-unit-tests)
+5. [Running End-to-End Tests](#running-end-to-end-tests)
+6. [Further Help](#further-help)
+7. [Project Structure](#project-structure)
+8. [Contributing](#contributing)
+9. [License](#license)
 
 ## Development server
 
