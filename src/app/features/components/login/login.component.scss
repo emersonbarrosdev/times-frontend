@@ -1,0 +1,112 @@
+@import '../../../../styles.scss';
+
+:host {
+  display: flex;
+  height: 100vh;
+}
+
+
+.brand-login {
+  flex: 0 0 50%;
+  background: linear-gradient(135deg,
+      mat-color($custom-primary-palette, 100),
+      mat-color($custom-primary-palette, 500),
+      mat-color($custom-primary-palette, 900),
+      mat-color($custom-accent-palette, 900),
+      mat-color($custom-accent-palette, 500),
+      mat-color($custom-accent-palette, 100));
+  background-size: 600% 600%;
+  animation: backgroundAnimation 10s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #fff;
+  }
+}
+
+//animação
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.example-container {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    color: mat-color($custom-primary-palette);
+    font-weight: 600;
+  }
+
+  .example-right-align {
+    text-align: right;
+  }
+
+  .mat-mdc-form-field {
+    width: 40% !important;
+
+  }
+
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+
+  .example-remember {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+  }
+
+  .example-create {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 40%;
+  }
+
+  .example-margin {
+    margin: 0 10px;
+  }
+
+  .mat-mdc-raised-button {
+    width: 40%;
+    margin: 16px 0;
+  }
+}
+
+span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: mat-color($custom-warn-palette);
+}
+
+.snackbar-success .mat-mdc-snack-bar-container .mdc-snackbar__surface {
+  background-color: mat-color($custom-primary-palette) !important;
+}
+
+.snackbar-error .mat-mdc-snack-bar-container .mdc-snackbar__surface {
+  background-color: mat-color($custom-warn-palette) !important;
+}
