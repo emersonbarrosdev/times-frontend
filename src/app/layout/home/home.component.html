@@ -1,3 +1,5 @@
 <div class="home-container">
-    <button mat-raised-button (click)="goToLogin()">LOGIN</button>
+    <button mat-raised-button color="primary" (click)="goToLogin()">{{ isLoggedIn() ? 'SAIR' : 'ENTRAR' }}</button>
+    <button mat-raised-button color="accent" (click)="goToCreateUser()">Criar Usuário</button>
+    <button mat-raised-button color="warn" (click)="goToListUsers()">Listar Usuários</button>
 </div>

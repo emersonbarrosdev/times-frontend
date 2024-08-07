@@ -1,0 +1,57 @@
+@import '../../../../styles.scss';
+
+:host {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mat-mdc-snack-bar-container {
+  --mdc-snackbar-container-color: none !important;
+  --mdc-snackbar-supporting-text-color: none !important;
+  --mat-snack-bar-button-color: none !important;
+  box-shadow: none !important;
+}
+
+.mat-mdc-snack-bar-container .mdc-snackbar__surface {
+  box-shadow: none !important;
+}
+
+.snackbar {
+  border-radius: var(--mdc-snackbar-container-shape);
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 6px 10px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 8px 8px 8px 16px;
+
+  &.error {
+    background-color: mat-color($custom-warn-palette);
+    color: #fff;
+
+  }
+
+  &.success {
+    background-color: #4caf50;
+    color: #fff;
+  }
+
+
+  &.info {
+    background-color: #2196f3;
+    color: white;
+  }
+
+  &.warning {
+    background-color: #ff9800;
+    color: white;
+  }
+
+  .mat-mdc-button .mdc-button__label {
+    color: #fff;
+  }
+
+}
