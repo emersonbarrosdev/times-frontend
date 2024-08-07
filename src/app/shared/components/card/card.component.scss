@@ -1,0 +1,25 @@
+.example-card {
+  width: 350px;
+  max-width: 350px;
+  height: auto; /* Permite que a altura aumente conforme necessário */
+  min-height: 200px; /* Altura mínima */
+  box-sizing: border-box;
+  margin: 8px; /* Adiciona margem para espaçamento entre cards */
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content {
+  margin: auto;
+}
+
+.example-card-footer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: auto; /* Garante que o footer esteja sempre no final do card */
+}
+
+button {
+  margin: 0 8px;
+}

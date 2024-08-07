@@ -1,1 +1,5 @@
-<p>header works!</p>
+<mat-toolbar color="accent">
+  <h1 class="title">Team Connect</h1>
+  <span class="spacer"></span>
+  <button mat-raised-button [color]="isLoggedIn() ? 'warn' : 'primary'" (click)="logout()">{{ isLoggedIn() ? 'SAIR' : 'ENTRAR' }}</button>
+</mat-toolbar>

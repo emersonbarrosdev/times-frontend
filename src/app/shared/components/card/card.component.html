@@ -1,0 +1,16 @@
+<mat-card class="example-card" appearance="outlined">
+    <mat-card-header>
+      <mat-card-title>Card {{data}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="card-content">
+      <mat-chip-set>
+        <mat-chip *ngFor="let team of selectedTeams">{{ team }}</mat-chip>
+      </mat-chip-set>
+    </mat-card-content>
+    <mat-card-footer class="example-card-footer">
+      <button *ngIf="userRole === 'ADMIN' || userRole === 'MANAGER'" mat-raised-button color="warn" (click)="openModal('REMOVE')">REMOVER</button>
+      <button *ngIf="userRole === 'ADMIN' || userRole === 'MANAGER'" mat-raised-button color="accent" (click)="openModal('EDIT')">SELECIONAR</button>
+      <button *ngIf="userRole === 'ADMIN' || userRole === 'MANAGER'" mat-raised-button color="primary" (click)="openModal('CREATE')">CRIAR</button>
+    </mat-card-footer>
+  </mat-card>
+  

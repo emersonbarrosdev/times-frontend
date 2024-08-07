@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>{{ data.mode === 'EDIT' ? 'Selecione os Times' : 'Confirmação' }}</h1>
+<div mat-dialog-content>
+  <ng-container *ngIf="data.mode === 'EDIT'; else confirmMode">
+    <mat-checkbox *ngFor="let team of teams" [checked]="selectedTeams.includes(team)" (change)="onCheckboxChange($event, team)">
+      {{ team }}
+    </mat-checkbox>
+  </ng-container>
+  <ng-template #confirmMode>
+    <p>{{ data.message }}</p>
+  </ng-template>
+</div>
+<div mat-dialog-actions>
+  <ng-container *ngIf="data.mode === 'REMOVE'; else defaultActions">
+    <button mat-button (click)="cancel()">Não</button>
+    <button mat-button color="primary" (click)="save()">Sim</button>
+  </ng-container>
+  <ng-template #defaultActions>
+    <button mat-button (click)="cancel()">Cancelar</button>
+    <button mat-button color="primary" (click)="save()">Salvar</button>
+  </ng-template>
+</div>

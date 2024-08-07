@@ -1,0 +1,24 @@
+<form [formGroup]="userForm" (ngSubmit)="createUser()">
+  <mat-form-field appearance="fill">
+    <mat-label>email</mat-label>
+    <input matInput id="email" formControlName="email">
+    <mat-error *ngIf="userForm.get('email')?.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Password</mat-label>
+    <input matInput id="password" type="password" formControlName="password">
+    <mat-error *ngIf="userForm.get('password')?.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Role</mat-label>
+    <mat-select id="role" formControlName="role">
+      <mat-option value="ADMIN">Admin</mat-option>
+      <mat-option value="MANAGER">Manager</mat-option>
+      <mat-option value="USER">User</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="userForm.invalid">Create User</button>
+</form>

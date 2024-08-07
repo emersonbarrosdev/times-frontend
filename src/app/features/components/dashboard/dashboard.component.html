@@ -1,0 +1,6 @@
+<div class="dashboard-container">
+    <app-card *ngFor="let card of cards; let i = index" [data]="card" [cardId]="i.toString()"></app-card>
+</div>
+<div class="logout-container">
+    <button mat-raised-button color="warn" (click)="logout()">Logout</button>
+</div>
